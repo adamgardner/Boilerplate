@@ -1,0 +1,2 @@
+SharedPreferences oPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+String strUpdateFrequency = oPrefs.getString("KEY", "DEFAULT VALUE"); // KEY IS DEFINED IN THE PREFERENCES XML FILE

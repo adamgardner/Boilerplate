@@ -1,0 +1,58 @@
+public static void parseCSV(String strFilePath)
+		{
+			File oCSVFile = new File(strFilePath);
+			
+			
+			if (oCSVFile.exists())
+			{
+				System.out.println("File Exists!");
+			
+				FileReader oFileReader = null;
+				try
+				{
+					oFileReader = new FileReader(oCSVFile);
+				}
+				catch (Exception e)
+				{
+					System.out.println("Error creating reader."); // This should never happen.
+				}
+				
+				BufferedReader oBufferedReader = new BufferedReader(oFileReader);
+				
+				String strLine = null;
+				try
+				{
+					strLine = oBufferedReader.readLine();
+				}
+				catch (Exception e)
+				{
+					System.out.println("IOException occured.");
+					strLine = null;
+				}
+				
+				while (strLine != null)
+				{
+					// Split the line on a comma to get tokens (data).
+					String[] astrTokens = strLine.split(",");
+					
+					// Do something with the tokens (print em out).
+					int iCount = 1;
+					for (String strToken : astrTokens)
+					{
+						System.out.println("Token " + iCount + ":" + strToken);
+						iCount++;
+					}
+					
+					// Read next line
+					try
+					{
+						strLine = oBufferedReader.readLine();
+					}
+					catch (Exception e)
+					{
+						System.out.println("IOException occured.");
+						strLine = null;
+					}
+				}
+			}
+		}

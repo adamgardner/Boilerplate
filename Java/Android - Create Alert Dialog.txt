@@ -1,0 +1,15 @@
+AlertDialog.Builder oDialogBuilder = new AlertDialog.Builder(this);
+oDialogBuilder.setTitle("Alert Title Box");
+oDialogBuilder.setMessage("Alert Dialog Message");
+oDialogBuilder.setPositiveButton("Positive Btn Text",new DialogInterface.OnClickListener()
+{
+	public void onClick(DialogInterface dialog,int id)
+	{
+		// Do something when clicked. Or do nothing & let the alert vanish.
+	}
+});
+
+// Create Alert Dialog
+AlertDialog oAlertDialog = oDialogBuilder.create();
+// Show Alert Dialog
+oAlertDialog.show();

@@ -1,0 +1,16 @@
+public int charCount(String strInput, char cChar)
+{
+	if (strInput == null || strInput.isEmpty()) return 0;
+	int iStringLength = strInput.length();
+		
+	int iLoop = 0;
+	int iCharCount = 0;
+	while (iLoop < iStringLength)
+	{
+		char cTestChar = strInput.charAt(iLoop);
+		if (cTestChar == cChar) iCharCount++;
+		iLoop++;
+	}
+		
+	return iCharCount;
+}

@@ -1,0 +1,22 @@
+/**
+ * Tests a string to see if it contains numbers
+ * @param input
+ * @return boolean Returns true if the input string contains numbers. Returns false otherwise.
+ */
+private boolean containsNumbers(String input)
+{
+    //For each character in the string
+    // Loop through, one character at a time
+    for (int i = 0; i<input.length();i++)
+    {
+        Character c = input.charAt(i);
+        // If the character (c) is NOT a letter, return true (string does contain at least one number)
+        if (!(Character.isLetter(c)))
+        {
+            return true;
+        }
+        
+    }
+    // If we get here, the input string doesn't contain numbers or punctuation, return false
+    return false;
+}

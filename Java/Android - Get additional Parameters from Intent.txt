@@ -1,0 +1,13 @@
+// Place in OnCreate of new Activity
+
+// Get the parameter that we passed when we create the Intent (when we show the activity)
+// This example uses a parameter called day to represent a day name
+
+Bundle bundle = this.getIntent().getExtras();
+			
+String dayName = "";
+			
+if (bundle != null)
+{
+	dayName = bundle.getString("day");
+}

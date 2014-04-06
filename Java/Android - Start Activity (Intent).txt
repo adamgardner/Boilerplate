@@ -1,0 +1,3 @@
+Intent i = new Intent(this,Day.class);
+i.putExtra("day", dayName); // This is optional to pass additional parameters
+startActivity(i);

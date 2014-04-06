@@ -1,0 +1,1 @@
+findViewByID(R.id.{whateverID}).setVisibility.(View.GONE);

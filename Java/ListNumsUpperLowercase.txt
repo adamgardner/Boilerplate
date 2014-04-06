@@ -1,0 +1,30 @@
+List<Character> oAllChars = new ArrayList<Character>(62); // Lowercase + Uppercase + Numbers
+
+int iChar = 48;
+// Add numbers 0-9
+while (iChar <= 57)
+{
+	oAllChars.add((char)iChar);
+	iChar++;
+}
+
+// Add uppercase letters A-Z
+iChar = 65;
+while (iChar <= 90)
+{
+	oAllChars.add((char)iChar);
+	iChar++;
+}
+
+// Add lowercase letters a-z
+iChar = 97;
+while (iChar <= 122)
+{
+	oAllChars.add((char)iChar);
+	iChar++;
+}
+
+for (Character oChar : oAllChars)
+{
+	System.out.println("(TH) Char: " + oChar);
+}

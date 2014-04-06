@@ -1,0 +1,13 @@
+<script>
+// Before page is created
+$(document).delegate("#indexpage", "pagebeforecreate", function()
+{
+
+});
+
+// When page has successfully loaded & been inserted into DOM
+$(document).delegate("#indexpage", "pagebeforecreate", function()
+{
+
+});
+</script>

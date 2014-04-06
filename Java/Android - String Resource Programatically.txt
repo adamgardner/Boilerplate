@@ -1,0 +1,3 @@
+// To use a String which is defined in the strings.xml file programatically
+
+String strValue = getResources().getString(R.string.whatever);

@@ -1,0 +1,15 @@
+Context context = getApplicationContext();
+CharSequence text = ("Some Text");
+int duration = Toast.LENGTH_SHORT;
+			
+Toast toast = Toast.makeText(context, text, duration);
+toast.show();
+
+/**
+ * The following consolodated way will show the toast on the current Activity
+ * We can also use Toast.LENGTH_LONG
+ * Note: We don't need to declare an object because we're showing it straight away
+ */
+ 
+Toast.makeText(getApplicationContext(),"Your Text Here", Toast.LENGTH_SHORT).show();
+ 

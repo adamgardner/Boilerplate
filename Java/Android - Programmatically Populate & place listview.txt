@@ -1,0 +1,17 @@
+List<String> oStringList = new ArrayList<String>();
+oStringList.add("First Item");
+oStringList.add("Second Item");
+oStringList.add("Third Item");
+
+/* Create Array Adapter
+ * An array adapter handles the hard work of putting the items from the List<String> into the ListView
+ * Note, simple_list_item_1 is an android defined preset.
+ArrayAdapter oArrayAdapter  = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,oScanResultStrings);
+
+ListView oListView = new ListView(this);
+// Assign the adapter to the list view. The hard work is done for us.
+oListView.setAdapter(oArrayAdapter);
+
+// Display the list in the Activity
+addContentView(oListView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+

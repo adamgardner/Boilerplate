@@ -1,0 +1,29 @@
+/*
+* Get Textual representation of day from day number
+* eg. Input: "30"
+*	   Output: "30th"
+* Assumptions:
+* Everything ending with a 1 is 'th' EXCEPT 11
+* Everything ending with a 2 is 'nd' EXCEPT 12
+* Everything ending with a 3 is 'rd' EXCEPT 13
+*/
+function getDayText($dayNumber)
+{
+	$castDayNumber = $dayNumber;
+	// Note: Must cast to an int to remove leading zero's
+	// eg. "01" --> "1"
+
+	// Do 'strange' cases first (11, 12 & 13)
+	if ($castDayNumber >= 11 && $castDayNumber <= 13) return $castDayNumber."th";
+
+	// Get final character. If 1 -> 'th'
+	// If 2 -> 'nd'
+	// If 3 -> 'rd'
+	$finalChar = substr($castDayNumber,(strlen($castDayNumber)-1));
+	if ($finalChar == 1) return $castDayNumber."st";
+	else if ($finalChar == 2) return $castDayNumber."nd";
+	else if ($finalChar == 3) return $castDayNumber."rd";
+	else return $castDayNumber."th";
+
+	return $castDayNumber;
+}

@@ -1,0 +1,13 @@
+/**
+ * Set up the Spinner for the Lesson Type
+ * An ArrayAdapter binds a data source (our array as defined in arrays.xml)
+ * to a UI element (the spinner)
+ * The rest of the code is boilerplate
+ */
+ ArrayAdapter<CharSequence> lessonAdapter = ArrayAdapter.createFromResource(this, R.array.lesson_types, android.R.layout.simple_spinner_item);
+        
+// This provides what to show when we see the drop down menu.
+lessonAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        
+// This actually binds the adapter (data) to the spinner).
+lessonTypeSpinner.setAdapter(lessonAdapter);
